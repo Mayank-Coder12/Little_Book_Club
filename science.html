@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science</title>
+ <link rel="stylesheet" href="./mainpage.css">
+</head>
+<body id="fantasyBody">
+    <div id="popupContact">
+        <button id="close" onclick="closeDiv()"><img id="close" src="./close-button.svg" alt=""></button>
+        <form action="./delete.php" method="post">
+            <div id="card">
+                <input id="email" name="phoneoremail" placeholder="Enter your email/phone given while signing up" type="text" />
+                <textarea name="description" id="detail" placeholder="Reason for deactivating your account"></textarea>
+                <button id="delete" type="submit">Delete Account</button>
+            </div>
+        </form>
+    </div>
+
+  <nav id="nav">
+    <ul class="left-ul">
+        <button class="back"><a href="./mainpage.html">BACK</a></button>
+    </ul>
+    <div class="empty"></div>
+    <form action="login.php" method="post">
+        <ul class="right-ul">
+            <li>
+                <select name="setting" class="nav-btn" id="options" onchange="run()">
+                    <option value="setting">Setting</option>
+                    <option value="profile">Your Profile</option>
+                    <option value="logout"><a href="./index.html">Logout</a></option>
+                    <option value="delete">Delete Account</option>
+                </select>
+            </li>
+        </ul>
+    </form>
+</nav>
+
+<br><br><br>
+
+<h2 style="text-align:center;">Enjoy Reading </h2>
+
+<div class="section-container flex-container">
+    <div class="item-container">
+        <div class="container flex-container jc-space-between">
+
+            <div id="book1">
+                <div>
+                    <img src="https://www.pdfbooksworld.com/image/cache/catalog/110-250x350.jpg" class="books" alt="">
+                    <h3>On the Origin of Species</h3>
+                    <br>
+
+                    <h4>Charles Darwin</h4>
+                    <button class="read-now"><a href="./science1.pdf" target="_blank">Read Now</a></button>
+                </div>
+            </div>
+
+            <div id="book2">
+                <div>
+                    <img src="https://www.bookrix.com/image/coverpic3d.php?art=book&size=xl&p=joshway16_1324302213.0526750088" class="books" alt="">
+                    <h3>Newton's laws</h3>
+                    <br>
+
+                    <h4>Sarah Joshway</h4>
+                    <button class="read-now"><a href="./science2.pdf" target="_blank">Read Now</a></button>
+                </div>
+            </div>
+           
+            <div id="book3">
+                <div>
+                    <img src="https://www.bookrix.com/image/coverpic3d.php?art=book&size=xl&p=deepakpant1_1276415412.1891009808" class="books" alt="">
+                    <h3>Chemistry Practical for B. Sc. Part II</h3>
+                    <br>
+
+                    <h4>Deepak Pant</h4>
+                    <button class="read-now"><a href="./dr-deepak-pant-chemistry-practical-for-b-sc-part-ii.epub" target="_blank">Read Now</a></button>
+                </div>
+            </div>
+
+            <div id="book4">
+                <div>
+                    <img src="https://www.bookrix.com/image/coverpic3d.php?art=book&size=xl&p=bx.london_1212157652.8553590775" class="books" alt="">
+                    <h3>The Human Drift</h3>
+                    <br>
+
+                    <h4>Jack London></h4>
+                    <button class="read-now"><a href="./jack-london-the-human-drift.epub" target="_blank">Read Now</a></button>
+                </div>
+            </div>
+
+
+           
+        </div>
+    </div>
+    <br>
+
+    <h2 style="text-align: center;">Scientific Books To Buy</h2>
+
+    <br><br>
+
+
+    <div class="item-container">
+        <div class="container flex-container jc-space-between">
+
+            <div id="book1">
+                <div>
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/41cHaHwRXUL._SX331_BO1,204,203,200_.jpg" class="books" alt="">
+                    <h3>The Science of Self Talk </h3>
+                    <br>
+                    <h3><del>$38.50</del> 10 (Save $28.5)</h3>
+                    <button class="read-now"><a href="./ordernow.html" target="_blank">Order Now</a></button>
+                </div>
+            </div>
+
+            <div id="book2">
+                <div>
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/514678xu7UL._SX335_BO1,204,203,200_.jpg" class="books" alt="">
+                    <h3>Antibiotic Essentials </h3>
+                    <br>
+                    <h3>$3</h3>
+                    <button class="read-now"><a href="./ordernow.html" target="_blank">Order Now</a></button>
+                </div>
+            </div>
+            
+
+            <div id="book3">
+                <div>
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51QJggj7p-L._SX324_BO1,204,203,200_.jpg" class="books" alt="">
+                    <h3>The Hunger Games </h3>
+                    <br>
+                    <h3>$2</h3>
+                    <button class="read-now"><a href="./ordernow.html" target="_blank">Order Now</a></button>
+                </div>
+            </div>
+            
+            
+            
+
+            
+        </div>
+    </div>
+</div>
+
+
+<script>
+function run() {
+  if (document.getElementById('options').value == "logout") {
+      window.location.href = "./index.html";
+  }
+  if (document.getElementById('options').value == "delete") {
+      document.getElementById('popupContact').style.display = "block";
+  }
+  if (document.getElementById('options').value == "profile") {
+      window.location.href = "./profile.html";
+  }
+}
+function closeDiv() {
+            document.getElementById('popupContact').style.display = "none"
+            location.reload();
+        }
+
+</script>
+
+</body>
+</html>

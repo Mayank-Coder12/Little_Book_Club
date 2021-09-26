@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-takeaway-order-delivery-takeaway-poster-background-image_124350.jpg");
+    background-size: 100% 100% ;
+}
+
+section{
+    width: 500px;
+    background-color: white;
+    margin: auto;
+    padding: 10px 0;
+}
+
+div{
+    text-align: center;
+}
+
+label{
+    font-weight: bold;
+}
+
+input, textarea{
+    margin:10px 0;
+}
+
+p, input[ type="text"],input[ type="number"], form{
+    width: 350px;
+    padding: 10px;
+}
+
+input[type="tel"]{
+  width: 350px;
+    padding: 10px;
+}
+
+p, form{
+    margin: auto;
+}
+
+input[type="submit"]{
+    display: block;
+    background-color:#1e90ff;
+    color: white;
+    margin: auto;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}

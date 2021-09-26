@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="mainpage.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="nav">
+    <ul class="left-ul">
+        <button class="back"><a href="./mainpage.html">BACK</a></button>
+    </ul>
+    <div class="empty"></div>
+    <form action="login.php" method="post">
+        <ul class="right-ul">
+            <li>
+                <select name="setting" class="nav-btn" id="options" onchange="run()">
+                    <option value="setting">Setting</option>
+                    <option value="profile">Your Profile</option>
+                    <option value="logout"><a href="./index.html">Logout</a></option>
+                    <option value="delete">Delete Account</option>
+                </select>
+            </li>
+        </ul>
+    </form>
+</nav>
+
+<div style="text-align:center;">
+  <br><br><br>
+  <h2>Change Password</h2>
+  <br><br>
+  <form action="./update.php" method="post">
+
+  <input type="text" class="control" name="phoneoremail" placeholder="Mobile number or Email">
+  <br>
+  <br>
+
+  <input type="password" style="padding:15px; width: 55%; " class="control" name="password" placeholder="New Password">
+
+  <br><br>
+
+  <input type="submit" class="btn" value="Update">
+
+</form>
+
+<div id="popupContact">
+    <button id="close" onclick="closeDiv()"><img id="close" src="./close-button.svg" alt=""></button>
+    <form action="./delete.php" method="post">
+        <div id="card">
+            <input id="email" name="phoneoremail" placeholder="Enter your email/phone given while signing up" type="text" />
+            <textarea name="description" id="detail" placeholder="Reason for deactivating your account"></textarea>
+            <button id="delete" type="submit">Delete Account</button>
+        </div>
+    </form>
+</div>
+
+
+
+
+</div>
+<script>function run() {
+  if (document.getElementById('options').value == "logout") {
+      window.location.href = "./index.html";
+  }
+  if (document.getElementById('options').value == "delete") {
+      document.getElementById('popupContact').style.display = "block";
+  }
+  if (document.getElementById('options').value == "profile") {
+      window.location.href = "./profile.html";
+  }
+}
+
+function closeDiv() {
+            document.getElementById('popupContact').style.display = "none"
+            window.location.href = "./mainpage.html";
+        }
+</script>
+</body>
+</html>

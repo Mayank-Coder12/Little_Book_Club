@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Book Store</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Open Nav -->
+  <nav id="nav">
+    <ul class="left-ul">
+      <li>
+        <a href="./index.html">The  Little Bookclub</a>
+      </li>
+    </ul>
+
+    <div class="empty"></div>
+
+    <Button id="login-btn" style="height: 50px; margin-top: 10px; padding: 10px; background:slateblue; color:#fff; cursor: pointer;" onclick="login()">Login</Button>
+    <div class="space" style="margin-right: 50px;"></div>
+    <Button id="signup-btn" style="height: 50px; margin-top: 10px; padding: 10px; background:slateblue; color:#fff; cursor: pointer;" onclick="signup()">Sign Up</Button>
+
+  </nav>
+  <!-- Close Nav -->
+
+  <div class="container">
+    <div class="left-section" style="margin: auto;">
+    <div class="left-heading">
+    <h3>Little Bookclub helps you connect with books which are useful for your whole life</h3>
+    <div class="image">
+    <img src="logo.png" alt="">
+    </div>
+    </div>
+    </div>
+
+
+    <script>
+      function login(){
+        location.href = "./login.html";
+      }
+
+      function signup(){
+location.href = "./signup.html"
+      }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Little Bookclub</title>
+    <link rel="stylesheet" href="./mainpage.css">
+</head>
+
+<body>
+
+    <nav id="nav">
+        <ul class="left-ul">
+            <li><a href="">Bookclub</a></li>
+        </ul>
+        <div class="empty"></div>
+        <form action="login.php" method="post">
+            <ul class="right-ul">
+                <li>
+                    <select name="setting" class="nav-btn" id="options" onchange="run()">
+                        <option value="setting">Setting</option>
+                        <option value="profile">Your Profile</option>
+                        <option value="logout"><a href="./index.html">Logout</a></option>
+                        <option value="delete">Delete Account</option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+    </nav>
+   
+
+    <div id="popupContact">
+        <button id="close" onclick="closeDiv()"><img id="close" src="./close-button.svg" alt=""></button>
+        <form action="./delete.php" method="post">
+            <div id="card">
+                <input id="email" name="phoneoremail" placeholder="Enter your email/phone given while signing up" type="text" />
+                <textarea name="reason" id="detail" placeholder="Reason for deactivating your account"></textarea>
+                <button id="delete" type="submit">Delete Account</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="text-container">
+      <h1 style="
+        font-size: 150px;
+        color: lime ;
+        text-align: center;
+        margin-top: 10%;
+      ">Welcome to Little Book Club</h1>
+    </div>
+
+    <h3 style="text-align: center; margin-top: 10px;"> <a class="gen" href="#genre">Scroll Down &#8595;</a></h3>
+    <br><br><br><br><br><br><br><br><br><br><br><hr><br><br><br><br>
+    
+    <div class="genre" id="genre">
+        <h1>Select your Genre</h1>
+        <br>
+        <select name="genre" id="genreSelect" onchange="runn()">
+            <option value="genres">Select next</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="horror">Horror</option>
+            <option value="science">Science Fiction</option>
+        </select>
+
+        <br><br><br><br><br>
+        <hr>
+        <h6>All Rights Reserved By @bookclub 2021</h6>
+    </div>
+
+
+    <script>
+        function run() {
+            if (document.getElementById('options').value == "logout") {
+                window.location.href = "./index.html";
+            }
+            if (document.getElementById('options').value == "delete") {
+                document.getElementById('popupContact').style.display = "block";
+            }
+            if (document.getElementById('options').value == "profile") {
+                window.location.href = "./profile.html";
+            }
+        }
+
+        function closeDiv() {
+            document.getElementById('popupContact').style.display = "none"
+            window.location.href = "./mainpage.html";
+        }
+
+        function runn() {
+            if(document.getElementById('genreSelect').value == "fantasy") {
+                window.location.href ="./fantasy.html";
+            }
+            if(document.getElementById('genreSelect').value == "horror") {
+                window.location.href ="./horror.html";
+            }
+            if(document.getElementById('genreSelect').value == "science") {
+                window.location.href ="./science.html";
+            }
+            if(document.getElementById('genreSelect').value == "mystery") {
+                window.location.href ="./mystery.html";
+            }
+             if(document.getElementById('genreSelect').value == "history") {
+                window.location.href ="./history.html";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
